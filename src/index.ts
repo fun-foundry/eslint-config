@@ -1,3 +1,3 @@
-export { default as node } from './node'
-export { default as nextjs } from './nextjs'
-export { default as vitest } from './vitest'
+export { default as node } from './node.js'
+export { default as nextjs } from './nextjs.js'
+export { default as vitest } from './vitest.js'
