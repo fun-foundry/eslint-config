@@ -77,6 +77,10 @@
     }
   },
   "devDependencies": {
+    "@next/eslint-plugin-next": "^16.1.6",
+    "@vitest/eslint-plugin": "^1.6.12",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-testing-library": "^7.16.0",
     "typescript": "^5.9.0"
   }
 }
