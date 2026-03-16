@@ -2,34 +2,41 @@
   "name": "@fun-foundry/eslint-config",
   "version": "1.0.0",
   "type": "module",
-  "main": "dist/index.js",
+  "main": "dist/src/index.js",
   "exports": {
-    ".": "./dist/index.js",
-    "./nextjs": "./dist/nextjs.js",
-    "./node": "./dist/node.js",
-    "./vitest": "./dist/vitest.js"
+    ".": "./dist/src/index.js",
+    "./nextjs": "./dist/src/nextjs.js",
+    "./node": "./dist/src/node.js",
+    "./vitest": "./dist/src/vitest.js"
   },
-  "types": "dist/index.d.ts",
+  "types": "dist/src/index.d.ts",
   "typesVersions": {
     "*": {
       "nextjs": [
-        "dist/nextjs.d.ts"
+        "dist/src/nextjs.d.ts"
       ],
       "node": [
-        "dist/node.d.ts"
+        "dist/src/node.d.ts"
       ],
       "vitest": [
-        "dist/vitest.d.ts"
+        "dist/src/vitest.d.ts"
       ],
       "*": [
-        "dist/index.d.ts"
+        "dist/src/index.d.ts"
       ]
     }
   },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "description": "Opinionated ESLint flat config presets maintained by fun-foundry.",
   "license": "MIT",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "test": "npm run build && npm run test:run",
+    "test:run": "node --test dist/test/*.test.js"
   },
   "engines": {
     "node": ">=18.18.0"
@@ -44,14 +51,14 @@
   "homepage": "https://github.com/fun-foundry/eslint-config#readme",
   "peerDependencies": {
     "@eslint/js": "^9.0.0",
-    "@next/eslint-plugin-next": "^15.0.0",
+    "@next/eslint-plugin-next": "^15.0.0 || ^16.0.0",
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
     "@vitest/eslint-plugin": "^1.5.0",
     "eslint": "^9.0.0",
     "eslint-config-prettier": "^10.0.0",
     "eslint-plugin-n": "^17.0.0",
-    "eslint-plugin-react": "^7.34.0",
+    "eslint-plugin-react": "^7.0.0",
     "eslint-plugin-react-hooks": "^5.0.0 || ^7.0.0",
     "eslint-plugin-simple-import-sort": "^12.0.0",
     "eslint-plugin-testing-library": "^7.9.0",
@@ -78,7 +85,9 @@
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^16.1.6",
+    "@types/node": "^22.0.0",
     "@vitest/eslint-plugin": "^1.6.12",
+    "eslint": "^9.0.0",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-testing-library": "^7.16.0",
     "typescript": "^5.9.0"
