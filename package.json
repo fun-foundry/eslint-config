@@ -50,12 +50,14 @@
   },
   "homepage": "https://github.com/fun-foundry/eslint-config#readme",
   "peerDependencies": {
+    "eslint": "^9.0.0"
+  },
+  "dependencies": {
     "@eslint/js": "^9.0.0",
     "@next/eslint-plugin-next": "^15.0.0 || ^16.0.0",
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
     "@vitest/eslint-plugin": "^1.5.0",
-    "eslint": "^9.0.0",
     "eslint-config-prettier": "^10.0.0",
     "eslint-plugin-n": "^17.0.0",
     "eslint-plugin-react": "^7.0.0",
@@ -66,30 +68,9 @@
     "globals": "^15.0.0",
     "typescript-eslint": "^8.0.0"
   },
-  "peerDependenciesMeta": {
-    "@next/eslint-plugin-next": {
-      "optional": true
-    },
-    "@vitest/eslint-plugin": {
-      "optional": true
-    },
-    "eslint-plugin-react": {
-      "optional": true
-    },
-    "eslint-plugin-react-hooks": {
-      "optional": true
-    },
-    "eslint-plugin-testing-library": {
-      "optional": true
-    }
-  },
   "devDependencies": {
-    "@next/eslint-plugin-next": "^16.1.6",
     "@types/node": "^22.0.0",
-    "@vitest/eslint-plugin": "^1.6.12",
     "eslint": "^9.0.0",
-    "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-testing-library": "^7.16.0",
     "typescript": "^5.9.0"
   }
 }
